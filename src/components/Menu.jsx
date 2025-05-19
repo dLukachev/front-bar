@@ -5,8 +5,7 @@ import RestaurantSelectModal from "./RestaurantSelectModal";
 import { useRestaurant } from "./RestaurantContext";
 import MenuItemModal from "./MenuItemModal";
 import { useNavigate } from "react-router-dom";
-
-const API_URL = "https://backend-bar.onrender.com/api/v1"; // твой бэкенд
+import { API_URL } from "../config";
 
 const RESTAURANT_ID = 1; // если у тебя один ресторан, можно захардкодить
 

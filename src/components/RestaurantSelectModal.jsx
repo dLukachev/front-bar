@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./RestaurantSelectModal.css";
+import { API_URL } from "../config";
 
 export default function RestaurantSelectModal({ open, onClose, onSelect }) {
   const [restaurants, setRestaurants] = useState([]);
@@ -10,7 +11,7 @@ export default function RestaurantSelectModal({ open, onClose, onSelect }) {
   useEffect(() => {
     if (!open) return;
     setLoading(true);
-    fetch("https://backend-bar.onrender.com/api/v1/restaurants?user_id=123456789")
+    fetch(`${API_URL}/restaurants?user_id=123456789`)
       .then(res => res.json())
       .then(data => {
         setRestaurants(data);

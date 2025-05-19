@@ -1,0 +1,1 @@
+export const API_URL = "https://backend-bar.onrender.com/api/v1"; 
