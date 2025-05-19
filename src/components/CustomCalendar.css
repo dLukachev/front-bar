@@ -1,0 +1,116 @@
+/* Внешний контейнер */
+.calendar-outer {
+  box-sizing: border-box;
+  position: absolute;
+  width: 328px;
+  height: 260px;
+  left: 31px;
+  top: 338px;
+  border: 1px solid #E8E8E8;
+  border-radius: 15px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+/* Внутренний контейнер */
+.calendar-inner {
+  /* position: absolute; */
+  width: 288px;
+  height: 220px;
+  /* left: 51px; */
+  /* top: 437px; */
+  overflow-x: scroll;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Полоска месяца */
+.calendar-month-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0 4px 0;
+  width: 288px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #fafafa;
+  border-radius: 8px 8px 0 0;
+  color: #303030;
+  margin-bottom: 0;
+}
+
+/* Сетка */
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 288px;
+  height: 192px;
+}
+
+.calendar-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 288px;
+  height: 24px;
+}
+
+.calendar-cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #303030;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.calendar-weekday {
+  font-weight: 600;
+  color: #303030;
+  background: transparent;
+  cursor: default;
+}
+
+.calendar-saturday {
+  color: #ff7a50 !important;
+}
+
+.calendar-sunday {
+  color: #ff7a50 !important;
+}
+
+.calendar-outside {
+  color: #e0e0e0 !important;
+  cursor: default;
+}
+
+.calendar-selected {
+  background: #ff7a50;
+  color: #fff !important;
+}
+
+.calendar-cell:hover:not(.calendar-outside):not(.calendar-weekday) {
+  background: #ffe3d6;
+  color: #ff7a50;
+} 

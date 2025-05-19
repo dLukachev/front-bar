@@ -1,0 +1,147 @@
+.time-slot-slider {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  height: 49px;
+  margin: 0 auto 16px auto;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.time-slot-svg-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.time-slot-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  height: 49px;
+  z-index: 1;
+  padding: 0 8px;
+  gap: 8px;
+}
+
+.time-slot-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #4B4B4B;
+  padding: 0 18px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  background: transparent;
+}
+
+.time-slot-btn.selected {
+  color: #FF6943;
+  font-weight: 600;
+}
+
+.time-slot-indicator {
+  position: absolute;
+  height: 4px;
+  background: #FF6943;
+  border-radius: 4px 4px 1px 1px;
+  bottom: 0;
+  transition: left 0.2s, width 0.2s;
+  z-index: 2;
+}
+
+.ios-time-slot-slider {
+  width: 100%;
+  max-width: 390px;
+  height: 49px;
+  margin: 0 auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: relative;
+}
+
+.ios-time-arrow {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #C4C4C4;
+  width: 40px;
+  height: 49px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+.ios-time-arrow:disabled {
+  color: #F1F1F1;
+  cursor: default;
+}
+
+.ios-time-slot-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 330px;
+  height: 49px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.ios-time-slot-item {
+  width: 110px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 21px;
+  position: relative;
+  transition: color 0.2s, opacity 0.2s;
+  white-space: nowrap;
+}
+
+.ios-time-slot-side {
+  color: #4B4B4B;
+  opacity: 0.4;
+}
+
+.ios-time-slot-center {
+  color: #FF6943;
+  opacity: 1;
+  font-weight: 700;
+}
+
+.ios-time-slot-indicator {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 6px;
+  height: 3px;
+  background: #FF6943;
+  border-radius: 4px 4px 1px 1px;
+  z-index: 2;
+} 

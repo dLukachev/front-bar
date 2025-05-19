@@ -1,0 +1,54 @@
+/* Оставлены только глобальные/базовые стили приложения. Все стили календаря удалены. */
+
+.custom-calendar {
+  border-radius: 16px;
+  border: 1px solid #f2f2f2;
+  box-shadow: none;
+  padding: 8px 0 0 0;
+  width: 100%;
+}
+
+.react-datepicker__header {
+  background: #fafafa;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+}
+
+.react-datepicker__current-month {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.react-datepicker__day-names {
+  margin-bottom: 0;
+}
+
+.react-datepicker__day {
+  font-weight: 500;
+  font-size: 16px;
+  color: #303030;
+  border-radius: 8px;
+  width: 36px;
+  line-height: 36px;
+  margin: 2px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: #ff7a50;
+  color: #fff;
+}
+
+.react-datepicker__day--outside-month {
+  color: #e0e0e0 !important;
+}
+
+.react-datepicker__day:hover {
+  background: #ffe3d6;
+  color: #ff7a50;
+}
+
+
+

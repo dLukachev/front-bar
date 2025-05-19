@@ -1,0 +1,33 @@
+.bottom-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background: #fff;
+  box-shadow: 0 -2px 12px #0001;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  border-radius: 18px 18px 0 0;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #888;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 0 0 0;
+  flex: 1;
+  transition: color 0.2s;
+}
+.nav-item .nav-icon {
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+.nav-item.active, .nav-item:active, .nav-item:hover {
+  color: #ff6d1b;
+} 

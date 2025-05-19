@@ -1,0 +1,553 @@
+.profile-page {
+  min-height: 100vh;
+  background: #fdf6f1;
+  font-family: 'Inter', Arial, sans-serif;
+  position: relative;
+  padding-bottom: 70px;
+}
+.profile-header-bg {
+  background: #f3e5d8;
+  height: 120px;
+  border-radius: 0 0 24px 24px;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 0;
+}
+.profile-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  background: #fdf6f1;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #e0cfc0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+.profile-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #6d4c2b;
+  margin-bottom: 2px;
+}
+.profile-username {
+  font-size: 15px;
+  color: #b08a5a;
+  margin-bottom: 8px;
+}
+.profile-level-block {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.profile-level {
+  font-size: 15px;
+  color: #6d4c2b;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.profile-quails {
+  font-size: 13px;
+  color: #b08a5a;
+  margin-bottom: 4px;
+}
+.profile-progress-bar {
+  width: 80%;
+  height: 6px;
+  background: #f3e5d8;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+.profile-progress {
+  height: 100%;
+  background: #b08a5a;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+.profile-menu-list {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px #e0cfc033;
+  margin: 0 16px 18px 16px;
+  padding: 8px 0;
+}
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 13px 18px;
+  font-size: 17px;
+  color: #6d4c2b;
+  cursor: pointer;
+  border-bottom: 1px solid #f3e5d8;
+  transition: background 0.15s;
+}
+.profile-menu-item:last-child {
+  border-bottom: none;
+}
+.profile-menu-item:hover {
+  background: #f3e5d8;
+}
+.profile-menu-icon {
+  font-size: 22px;
+  margin-right: 14px;
+}
+.profile-menu-label {
+  flex: 1;
+}
+.profile-menu-arrow {
+  color: #b08a5a;
+  font-size: 20px;
+}
+.profile-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 18px 16px 0 16px;
+  font-size: 17px;
+  color: #6d4c2b;
+}
+.profile-theme-label {
+  font-size: 17px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.switch input { display: none; }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #f3e5d8;
+  border-radius: 24px;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #b08a5a;
+  border-radius: 50%;
+  transition: .4s;
+}
+input:checked + .slider {
+  background: #b08a5a;
+}
+input:checked + .slider:before {
+  background: #fff;
+  transform: translateX(20px);
+}
+@media (max-width: 430px) {
+  .profile-header {
+    margin-top: 12px;
+  }
+  .profile-menu-list {
+    margin: 0 4px 18px 4px;
+  }
+  .profile-theme-toggle {
+    margin: 18px 4px 0 4px;
+  }
+}
+.profile-page.dark {
+  background: #2d1c0b;
+}
+.profile-page.dark .profile-header-bg {
+  background: #3d2a16;
+}
+.profile-page.dark .profile-header,
+.profile-page.dark .profile-name,
+.profile-page.dark .profile-level,
+.profile-page.dark .profile-theme-label {
+  color: #fff;
+}
+.profile-page.dark .profile-username,
+.profile-page.dark .profile-quails,
+.profile-page.dark .profile-menu-arrow {
+  color: #e0cfc0;
+}
+.profile-page.dark .profile-menu-list {
+  background: #3d2a16;
+  box-shadow: 0 2px 12px #0005;
+}
+.profile-page.dark .profile-menu-item {
+  color: #fff;
+  border-bottom: 1px solid #6d4c2b;
+}
+.profile-page.dark .profile-menu-item:hover {
+  background: #6d4c2b;
+}
+.profile-page.dark .profile-progress-bar {
+  background: #6d4c2b;
+}
+.profile-page.dark .profile-progress {
+  background: #fff;
+}
+.profile-page.dark .slider {
+  background: #6d4c2b;
+}
+.profile-page.dark .slider:before {
+  background: #fff;
+}
+.pay-method-btn {
+  background: #fff;
+  border: 2px solid #f3e5d8;
+  border-radius: 14px;
+  padding: 14px 22px;
+  font-size: 18px;
+  color: #6d4c2b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  outline: none;
+}
+.pay-method-btn.active {
+  background: #f3e5d8;
+  border: 2px solid #b08a5a;
+  color: #b08a5a;
+}
+.pay-method-btn:not(.active):hover {
+  background: #f9ede3;
+}
+.pay-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #6d4c2b;
+  margin: 0 0 22px 22px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.pay-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 18px 0 18px;
+}
+.pay-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px #e0cfc033;
+  padding: 16px 18px;
+  font-size: 20px;
+  color: #6d4c2b;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.pay-card.active {
+  border: 2px solid #b08a5a;
+  box-shadow: 0 4px 16px #b08a5a22;
+}
+.pay-card-dots {
+  margin-left: auto;
+  font-size: 18px;
+  color: #b08a5a;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.pay-add-link {
+  margin: 22px 0 0 22px;
+  color: #b08a5a;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  width: fit-content;
+  transition: color 0.2s;
+}
+.pay-add-link:hover {
+  color: #6d4c2b;
+}
+@media (max-width: 430px) {
+  .pay-title { margin-left: 8px; }
+  .pay-cards-list { margin: 0 4px 0 4px; }
+  .pay-add-link { margin-left: 8px; }
+}
+.about-page {
+  background: #fdf6f1;
+}
+.about-container {
+  width: 390px;
+  height: 844px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fdf6f1;
+  border-radius: 24px;
+  box-shadow: 0 2px 24px #0001;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+}
+.about-content {
+  width: 100%;
+  padding: 31px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+.about-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 24px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+.about-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 32px 0;
+}
+.about-form label {
+  color: #b08a5a;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.about-input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  padding: 0 14px;
+  border: 1.5px solid #f3e5d8;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #222;
+  background: #fff;
+  font-weight: 500;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.about-input:focus {
+  border: 1.5px solid #b08a5a;
+}
+.about-addresses-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 12px 0;
+}
+.about-addresses-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #222;
+}
+.about-addresses-add {
+  font-size: 28px;
+  color: #b08a5a;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.about-addresses-add:hover {
+  color: #6d4c2b;
+}
+.about-addresses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 18px 0;
+}
+.about-address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #e0cfc033;
+  padding: 13px 16px;
+  font-size: 17px;
+  color: #6d4c2b;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.about-address-card.active {
+  border: 2px solid #b08a5a;
+  background: #f3e5d8;
+  box-shadow: 0 4px 16px #b08a5a22;
+}
+.about-address-icon {
+  font-size: 22px;
+  margin-top: 2px;
+}
+.about-address-title-txt {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+}
+.about-address-desc {
+  font-size: 14px;
+  color: #b08a5a;
+  font-weight: 500;
+}
+@media (max-width: 430px) {
+  .about-container {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    border-radius: 0;
+  }
+  .about-content {
+    width: 100vw;
+    padding: 16px;
+  }
+  .about-input, .about-address-card {
+    width: 100vw;
+    min-width: 0;
+  }
+}
+.about-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 70px;
+  background: #fdf6f1;
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.about-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 24px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  margin-top: 24px;
+}
+.about-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 32px 0;
+}
+.about-form label {
+  color: #b08a5a;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.about-input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+  padding: 0 14px;
+  border: 1.5px solid #f3e5d8;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #222;
+  background: #fff;
+  font-weight: 500;
+  outline: none;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+.about-input:focus {
+  border: 1.5px solid #b08a5a;
+}
+.about-addresses-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 12px 0;
+}
+.about-addresses-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #222;
+}
+.about-addresses-add {
+  font-size: 28px;
+  color: #b08a5a;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+  line-height: 1;
+}
+.about-addresses-add:hover {
+  color: #6d4c2b;
+}
+.about-addresses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 0 18px 0;
+}
+.about-address-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #e0cfc033;
+  padding: 13px 16px;
+  font-size: 17px;
+  color: #6d4c2b;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+.about-address-card.active {
+  border: 2px solid #b08a5a;
+  background: #f3e5d8;
+  box-shadow: 0 4px 16px #b08a5a22;
+}
+.about-address-icon {
+  font-size: 22px;
+  margin-top: 2px;
+}
+.about-address-title-txt {
+  font-size: 17px;
+  font-weight: 700;
+  color: #222;
+}
+.about-address-desc {
+  font-size: 14px;
+  color: #b08a5a;
+  font-weight: 500;
+}
+@media (max-width: 430px) {
+  .about-app {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+} 
