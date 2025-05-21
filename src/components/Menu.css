@@ -210,10 +210,9 @@ body, .menu-app {
   font-family: 'SF Pro Text';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
-  display: flex;
-  align-items: center;
+  font-size: 12px;
+  line-height: normal;
+  letter-spacing: 0;
   color: #410C00;
   position: static;
   height: auto;
@@ -230,9 +229,9 @@ body, .menu-app {
   flex-direction: row;
 }
 .menu-card-price {
-  font-family: 'Tiffany';
+  font-family: 'Tiffany', serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 27px;
   line-height: 28px;
   display: flex;
@@ -280,81 +279,54 @@ body, .menu-app {
 }
 .menu-card .cart-count-btn-wrapper {
   position: absolute;
-  left: 7px;
-  bottom: 7px;
-  width: 100px;
-  height: 35px;
+  width: 150px;
+  height: 22px;
+  left: 6px;
+  top: 210px;
+  background: #410C00;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
-  margin-bottom: 0;
+  margin: 0;
+  box-shadow: none;
 }
 .menu-card .cart-count-btn-border {
-  box-sizing: border-box;
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  background: #FFFBF7;
-  border: 1.5px solid #410C00;
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  display: none;
 }
 .menu-card .cart-count-btn {
-  position: relative;
-  z-index: 1;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0 14px;
-  /* убираем старую обводку */
-  border: none;
   background: none;
-  border-radius: 0;
-}
-/* Shared counter button styles */
-.cart-count-btn .count-btn {
-  background: #410C00;
   border: none;
-  color: #fff;
+  box-shadow: none;
+  padding: 0 32px;
+}
+.menu-card .cart-count-btn .count-btn {
+  background: none;
+  color: #FFFBF7;
+  border: none;
+  font-size: 18px;
+  width: 24px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background 0.2s;
   padding: 0;
 }
-.cart-count-btn .count-btn:active {
-  background: #6d2b13;
-}
-
-/* Menu counter button styles */
-.menu-card .cart-count-btn .count-btn {
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1;
-}
 .menu-card .cart-count-btn .count-value {
-  font-family: 'Tiffany';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
-  
-  line-height: 24px;
-  color: #410C00;
-  min-width: 24px;
+  color: #FFFBF7;
+  font-family: 'SF Pro Text', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  min-width: 18px;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: 0;
 }
 .loading {
   text-align: center;
@@ -459,6 +431,14 @@ body, .menu-app {
   margin-top: -14px;
   margin-bottom: -10px;
 }
+.menu-item-modal .modal-price svg {
+  margin-left: 10px;
+  
+  width: auto;
+  position: relative;
+  top: -1px;
+  display: inline-block;
+}
 .menu-item-modal .modal-desc-title {
   width: 78px;
   height: 17px;
@@ -526,7 +506,7 @@ body, .menu-app {
 .menu-item-modal .cart-count-btn {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: 9%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -534,18 +514,24 @@ body, .menu-app {
   box-sizing: border-box;
   padding: 0 14px;
   border: none;
-  
   background: none;
   border-radius: 0;
 }
 /* Modal counter button styles */
 .menu-item-modal .cart-count-btn .count-btn {
-  margin-left: 6px;
-  margin-right: 6px;
-  width: 22px;
+  margin: 0;
+  width: 21px;
   height: 20px;
-  border-radius: 6px;
-  font-size: 20px;
+  border-radius: 5px;
+  font-size: 0;
+  background: none;
+  border: none;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
 }
 .menu-item-modal .cart-count-btn .count-value {
   font-size: 25px;
@@ -599,17 +585,16 @@ body, .menu-app {
   margin-bottom: 28px;
 }
 .menu-category-title {
-  font-family: 'Tiffany';
+  font-family: 'SF Pro Text';
   font-style: normal;
-  font-weight: 300;
-  font-size: 31px;
-  line-height: 28px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
   display: flex;
   align-items: center;
   color: #410C00;
   margin: 8px 0 5px 23px;
   letter-spacing: -0.02em;
-  transform: scaleY(0.92);
 }
 
 /* CartPage styles */
@@ -945,4 +930,37 @@ body, .menu-app {
   color: #410C00;
   min-width: 18px;
   text-align: center;
+}
+
+@font-face {
+  font-family: 'Tiffany';
+  src: url('/fonts/tiffany/tiffany.woff2') format('woff2'),
+       url('/fonts/tiffany/tiffany.woff') format('woff'),
+       url('/fonts/tiffany/tiffany.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.add-to-cart-btn {
+  font-size: 12px !important;
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  
+  width: 100%;
+  font-family: 'SF Pro Text', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: normal;
+  letter-spacing: 0;
+  margin-top: auto;
+}
+
+.menu-card-price svg {
+  margin-left: 5px;
+  
+  width: auto;
+  display: inline-block;
 } 

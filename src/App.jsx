@@ -12,6 +12,7 @@ import { RestaurantProvider } from './components/RestaurantContext';
 import './components/Menu.css';
 import CartPage from './components/CartPage';
 import OrderPage from './components/OrderPage';
+import Admin from './components/Admin';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/new-address" element={<NewAddress />} />
             <Route path="/reservation" element={<Reservation />} />
             <Route path="/select-table" element={<TableSelectPageWrapper />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
           <BottomNav />
         </div>
